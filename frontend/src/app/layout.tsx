@@ -44,30 +44,36 @@ export default function RootLayout({
 
             <nav className="flex flex-col gap-4">
               <Link
-                href="/dashboard"
-                className="hover:bg-gray-200 dark:hover:bg-gray-800 px-3 py-2 rounded transition"
+                href="/realtime_monitoring"
+                className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-800 px-3 py-2 rounded transition"
               >
-                Real-time Monitoring
+                <i className="pi pi-chart-line"></i>
+                <span>Real-time Monitoring</span>
               </Link>
               <Link
-                href="/settings"
-                className="hover:bg-gray-200 dark:hover:bg-gray-800 px-3 py-2 rounded transition"
+                href="/hypercare"
+                className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-800 px-3 py-2 rounded transition"
               >
-                Sales Forecast
+                <i className="pi pi-heart"></i>
+                <span>Hypercare</span>
               </Link>
-              <Link
-                href="/profile"
-                className="hover:bg-gray-200 dark:hover:bg-gray-800 px-3 py-2 rounded transition"
+               <Link
+                href="/sales_forecast"
+                className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-800 px-3 py-2 rounded transition"
               >
-                Hypercare
+                <i className="pi pi-chart-bar"></i>
+                <span>Sales Forecast</span>
               </Link>
+
               <Link
-                href="/profile"
-                className="hover:bg-gray-200 dark:hover:bg-gray-800 px-3 py-2 rounded transition"
+                href="/data_source"
+                className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-800 px-3 py-2 rounded transition"
               >
-                Data Source
+                <i className="pi pi-database"></i>
+                <span>Data Source</span>
               </Link>
             </nav>
+
           </div>
 
           <footer className="mt-8 flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
