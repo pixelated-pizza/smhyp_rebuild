@@ -315,34 +315,37 @@ export default function RealtimeMonitoringPage() {
     return () => clearInterval(interval);
   }, []);
 
-  if (loading) return <div className="p-10 flex text-gray-500 h-fit gap-4"><span>Loading...</span>
-      <svg xmlns="http://www.w3.org/2000/svg" id="spinner" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-      </svg>
-    </div>;
-
-  // return (
-  //   <div className="px-10 py-10">
-  //     <div className="bg-gray-50 px-8 py-6 w-full">
-  //       <div className="max-w-7xl mx-auto">
-  //         <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
-  //           Real-Time Sales Monitoring
-  //         </h1>
-
-  //         <RealtimeMonitoringTable todayData={todayData} prevData={prevData} />
-
-  //         <p className="text-sm text-gray-400 text-center mt-4">
-  //           Last updated: {new Date().toLocaleTimeString()}{" "}
-  //           ({timeRanges.find(isCurrentRange) || "N/A"} range)
-  //         </p>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
+  if (loading)
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+      <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center gap-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="spinner"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColorsss"
+          className="w-8 h-8 text-gray-600 animate-spin"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 
+            0h4.992m-4.993 0 3.181 3.183a8.25 
+            8.25 0 0 0 13.803-3.7M4.031 
+            9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 
+            3.182m0-4.991v4.99"
+          />
+        </svg>
+        <span className="text-gray-600 font-medium">Loading</span>
+      </div>
+    </div>
+  );
 
   return (
   <div className="px-10 py-10">
-    <div className="bg-gray-50 px-8 py-6 rounded-lg shadow w-full max-w-7xl mx-auto">
+    <div className="bg-gray-50 px-8 py-6 rounded-lg shadow w-full mx-auto">
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
         Real-Time Sales Monitoring
       </h1>
